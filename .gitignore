@@ -11,10 +11,7 @@ __pycache__/
 # Django local artifacts & secrets
 .env
 *.env
-*.sqlite3
 backend/staticfiles/
-backend/media/
-backend/data/
 
 # Local backups & OS artifacts
 backups/
