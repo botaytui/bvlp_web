@@ -79,7 +79,7 @@ class DvktImportTests(TestCase):
 
 class DvktPricesApiTests(TestCase):
     def create_service(self, **overrides):
-        values = dict(stt=1, ma_dich_vu="22.0152.1609.K.95002", ten_dich_vu="Xét nghiệm tế bào", don_gia=Decimal("60600.1250"), gia_thanh_toan=Decimal("50000"), ma_cskcb="95093", tu_ngay=date(2026, 9, 4))
+        values = dict(stt=1, ma_dich_vu="22.0152.1609.K.95002", ten_dich_vu="Tên dịch vụ", ten_dvkt_gia="Xét nghiệm tế bào", don_gia=Decimal("60600.1250"), gia_thanh_toan=Decimal("50000"), ma_cskcb="95093", tu_ngay=date(2026, 9, 4))
         values.update(overrides)
         return Dvkt.objects.create(**values)
 
