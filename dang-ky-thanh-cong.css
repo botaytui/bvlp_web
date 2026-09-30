@@ -1,0 +1,87 @@
+.booking-success-page {
+  background: var(--primary-soft);
+}
+
+.success-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 22px 20px;
+  background: var(--white);
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--primary-soft-border);
+}
+
+.success-header img { flex-shrink: 0; }
+
+.success-main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border: 1px solid var(--primary-soft-border);
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 12px 40px rgb(7 89 113 / 8%);
+  text-align: center;
+}
+
+.success-icon {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  color: var(--primary-teal);
+  background: var(--primary-soft);
+}
+
+.success-card h1 {
+  margin-bottom: 14px;
+  color: var(--primary-text);
+  font-size: clamp(26px, 5vw, 34px);
+}
+
+.success-card p { font-size: 16px; line-height: 1.7; }
+
+.success-code {
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--primary-soft);
+  color: var(--primary-text);
+  overflow-wrap: anywhere;
+}
+
+.success-note { margin-top: 20px; color: var(--text-muted); }
+
+.success-actions { display: flex; gap: 12px; margin-top: 30px; }
+
+.success-button {
+  flex: 1;
+  padding: 13px 20px;
+  border: 1px solid var(--primary-teal);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.success-button-primary { color: var(--white); background: var(--primary-teal); }
+.success-button-primary:hover { background: var(--primary-teal-dark); }
+.success-button-secondary { color: var(--primary-teal); }
+.success-button-secondary:hover { background: var(--primary-soft); }
+.success-button:focus-visible { outline: 3px solid var(--primary-teal); outline-offset: 4px; }
+
+@media (max-width: 480px) {
+  .success-main { padding: 28px 16px; }
+  .success-card { padding: 28px 20px; }
+  .success-actions { flex-direction: column; }
+}

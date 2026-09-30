@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang='vi'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name='theme-color' content='#006d77'>
+  <meta name='description' content='Đăng ký khám trực tuyến tại Bệnh viện Lao và Bệnh phổi Bạc Liêu.'>
+  <title>Đặt lịch khám | Bệnh viện Lao và Bệnh phổi Bạc Liêu</title>
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/images/logo.png">
+  <link rel='stylesheet' href='./styles.css'>
+  <script defer src='./app.js'></script>
+</head>
+<body class='booking-page'>
+  <a class='skip-link' href='#noi-dung-chinh'>Chuyển đến nội dung chính</a>
+  <header class='subpage-header'>
+    <div class='container header-inner'>
+      <a class='brand-link' href='./index.html'>
+        <span class='brand-logo-wrap' aria-hidden='true'><img src='./assets/images/logo.png' alt='' class='brand-logo' width='44' height='44'></span>
+        <span class='brand-text'><strong class='brand-name'>BỆNH VIỆN LAO VÀ BỆNH PHỔI BẠC LIÊU</strong><small class='brand-slogan'>Vì lá phổi khỏe mạnh của cộng đồng</small></span>
+      </a>
+      <a class='button button-secondary' href='./index.html'>← Về trang chủ</a>
+    </div>
+  </header>
+  <main id='noi-dung-chinh'>
+    <section class='subpage-hero'><div class='container'><span class='eyebrow'>Dành cho người bệnh</span><h1>Đặt lịch khám trực tuyến</h1><p>Điền thông tin ngắn gọn, bệnh viện sẽ liên hệ xác nhận trong giờ làm việc.</p></div></section>
+    <section class='section booking-section' id='dat-lich' aria-labelledby='booking-title'>
+      <div class='container booking-layout'>
+        <div class='booking-copy'><span class='eyebrow'>Chủ động thời gian</span><h2 id='booking-title'>Thông tin cần chuẩn bị</h2><ul class='check-list'><li>Số điện thoại đang sử dụng để bệnh viện liên hệ.</li><li>Ngày mong muốn và chuyên khoa hoặc mô tả triệu chứng.</li><li>Giấy tờ tùy thân, thẻ BHYT khi đến bệnh viện.</li></ul><p><strong>Cần hỗ trợ?</strong><br><a href='tel:02913822115'>Gọi 0291 3 822 115</a></p></div>
+        <form class='booking-form' id='booking-form' novalidate>
+          <div class='form-heading'><h3>Thông tin đăng ký</h3><p>Các trường có dấu * là bắt buộc.</p></div>
+          <div class='form-grid'>
+            <label class='field field-wide'><span>Họ và tên <b aria-hidden='true'>*</b></span><input name='fullName' type='text' autocomplete='name' required minlength='2' placeholder='Nhập họ và tên'><small class='field-error'></small></label>
+            <label class='field'><span>Số điện thoại <b aria-hidden='true'>*</b></span><input name='phone' type='tel' inputmode='tel' autocomplete='tel' required pattern='^(0|\+84)[0-9 ]{8,12}$' placeholder='Ví dụ: 0912 345 678'><small class='field-error'></small></label>
+            <label class='field'><span>Ngày mong muốn <b aria-hidden='true'>*</b></span><input name='appointmentDate' type='date' required><small class='field-error'></small></label>
+            <label class='field field-wide'><span>Chuyên khoa <small>(nếu biết)</small></span><select name='specialty'><option value=''>Chưa rõ chuyên khoa</option><option value='ho-hap'>Khám hô hấp</option><option value='lao'>Khám lao</option><option value='phoi-man-tinh'>Bệnh phổi mạn tính</option><option value='noi-tong-hop'>Khám Nội tổng hợp</option></select><small class='field-error'></small></label>
+            <label class='field field-wide'><span>Mô tả triệu chứng <small>(nếu chưa rõ chuyên khoa)</small></span><textarea name='symptoms' rows='4' maxlength='1500' placeholder='Ví dụ: Ho/sốt dai dẳng 2–3 ngày...'></textarea><small class='field-error'></small></label>
+            <label class='consent field-wide'><input name='consent' type='checkbox' required><span>Tôi đồng ý để bệnh viện sử dụng thông tin trên nhằm tiếp nhận và xác nhận đăng ký khám.</span></label>
+          </div>
+          <input class='hp-field' name='website' type='text' tabindex='-1' autocomplete='off' aria-hidden='true'>
+          <button class='button button-primary button-block' type='submit'>Gửi thông tin đăng ký</button>
+          <div class='form-status' role='status' aria-live='polite'></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class='site-footer'><div class='container footer-bottom compact-footer'><p>© 2026 Bệnh viện Lao và Bệnh phổi Bạc Liêu. Bản giao diện thử nghiệm.</p><a href='./index.html'>Trang chủ</a></div></footer>
+</body>
+</html>

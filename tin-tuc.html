@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b6076">
+  <meta name="description" content="Tin tức, thông báo và kiến thức sức khỏe từ Bệnh viện Lao và Bệnh phổi Bạc Liêu.">
+  <title>Tin tức & Thông báo | Bệnh viện Lao và Bệnh phổi Bạc Liêu</title>
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&amp;family=Roboto+Condensed:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="./news.css?v=20260928_v4?v=20260928_v3">
+  <script defer src="./app.js"></script>
+  <script type="module" src="./news.js?v=20260928_v4?v=20260928_v3"></script>
+</head>
+
+<body class="home-page news-page" data-news-view="list">
+  <a class="skip-link" href="#noi-dung-chinh">Chuyển đến nội dung chính</a>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:02913678977" class="topbar-item topbar-phone">
+          <svg class="topbar-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path
+              d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+          <strong>0291 3 678 977</strong>
+        </a>
+        <span class="topbar-divider">|</span>
+        <div class="topbar-item topbar-hours">
+          <svg class="topbar-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z" />
+          </svg>
+          <span>Thời gian làm việc: Khám bệnh giờ hành chính · Cấp cứu 24/7</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <a href="./dich-vu.html" class="topbar-link">
+          <svg class="topbar-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+          <span>Tra cứu thông tin</span>
+        </a>
+        <span class="topbar-divider">|</span>
+        <a href="./quy-trinh.html" class="topbar-link">
+          <svg class="topbar-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path
+              d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z" />
+          </svg>
+          <span>Quy trình khám</span>
+        </a>
+        <span class="topbar-divider">|</span>
+        <a href="./lien-he.html" class="topbar-link">
+          <svg class="topbar-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path
+              d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4.3c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-.99-1.03z" />
+          </svg>
+          <span>Liên hệ</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-link" aria-label="Bệnh viện Lao và Bệnh phổi Bạc Liêu - Trang chủ">
+        <div class="brand-logo-wrap">
+          <img src="./assets/images/logo.png" alt="Logo Bệnh viện Lao và Bệnh phổi Bạc Liêu" class="brand-logo"
+            width="46" height="46">
+        </div>
+        <div class="brand-text">
+          <strong class="brand-name">BỆNH VIỆN LAO VÀ BỆNH PHỔI BẠC LIÊU</strong>
+          <span class="brand-slogan">Vì lá phổi khỏe mạnh của cộng đồng</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-menu-toggle" aria-controls="main-navigation" type="button" aria-expanded="false"
+        aria-label="Mở menu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="main-navigation" id="main-navigation" aria-label="Điều hướng chính">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="./index.html" class="nav-link">Trang chủ</a></li>
+          <li class="nav-item"><a href="./index.html#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li class="nav-item"><a href="./index.html#chuyen-khoa" class="nav-link">Chuyên khoa</a></li>
+          <li class="nav-item"><a href="./dich-vu.html" class="nav-link">Dịch vụ</a></li>
+          <li class="nav-item"><a href="./tin-tuc.html" class="nav-link active" aria-current="page">Tin tức &amp; thông
+              báo</a></li>
+          <li class="nav-item"><a href="./quy-trinh.html" class="nav-link">Người bệnh</a></li>
+          <li class="nav-item"><a href="./lien-he.html" class="nav-link">Liên hệ</a></li>
+        </ul>
+        <a class="nav-search-btn" href="./tin-tuc.html#news-search" aria-label="Tìm kiếm tin tức">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <button class="btn-booking-header" type="button" data-open-booking>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path
+              d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+            <circle cx="9" cy="14" r="1.2" />
+            <circle cx="15" cy="14" r="1.2" />
+          </svg>
+          <span>Đặt lịch khám</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="noi-dung-chinh">
+    <section class="hero-section" id="gioi-thieu" aria-label="Giới thiệu bệnh viện">
+      <div class="container hero-container">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-text-wrap">
+          <p class="hero-title">
+            <span class="hero-line-desktop">BỆNH VIỆN LAO VÀ BỆNH PHỔI BẠC LIÊU</span>
+            <span class="hero-line-mobile-1">BỆNH VIỆN LAO VÀ</span>
+            <span class="hero-line-mobile-2">BỆNH PHỔI BẠC LIÊU</span>
+          </p>
+          <p class="hero-subtitle">Vì lá phổi khỏe mạnh của cộng đồng</p>
+          <p class="hero-desc">Chúng tôi nỗ lực mang đến dịch vụ khám, chữa bệnh chất lượng, an toàn và thân thiện, vì
+            sức khỏe hô hấp của nhân dân.</p>
+          <div class="hero-cta-group">
+            <button class="btn-hero-booking" type="button" data-open-booking>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+                <circle cx="9" cy="14" r="1.2" />
+                <circle cx="15" cy="14" r="1.2" />
+              </svg>
+              <span>Đặt lịch khám</span>
+            </button>
+            <a href="tel:02913678977" class="btn-hero-hotline">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="#00758a">
+                <path
+                  d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              <span>Gọi hotline</span>
+            </a>
+          </div>
+          <!-- Mobile Carousel Dots -->
+          <div class="hero-carousel-dots" aria-hidden="true">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-main">
+      <div class="container">
+        <nav class="news-breadcrumb" aria-label="Đường dẫn"><a href="./index.html">Trang chủ</a><span
+            aria-hidden="true">/</span><span>Tin tức &amp; thông báo</span></nav>
+        <h1 class="sr-only">Tin tức &amp; thông báo</h1>
+        <div class="news-layout">
+          <div class="news-primary">
+
+            <div class="news-controls">
+              <div class="news-tabs" role="group" aria-label="Lọc theo loại bài viết">
+                <button class="news-tab active" type="button" data-news-category="all" aria-pressed="true">Tất
+                  cả</button>
+                <button class="news-tab" type="button" data-news-category="news" aria-pressed="false">Tin tức</button>
+                <button class="news-tab" type="button" data-news-category="announcement" aria-pressed="false">Thông
+                  báo</button>
+              </div>
+              <label class="news-search" for="news-search"><span class="sr-only">Tìm kiếm tin tức</span><input
+                  id="news-search" type="search" autocomplete="off" placeholder="Tìm theo tiêu đề, mô tả…"><svg
+                  viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg></label>
+            </div>
+            <div id="news-list" class="news-grid" aria-live="polite" aria-busy="true">
+              <div class="news-state news-loading">Đang tải tin tức và thông báo…</div>
+            </div>
+          </div>
+          <aside class="news-sidebar" aria-label="Thông báo và hỗ trợ người bệnh">
+            <section class="sidebar-notices" aria-labelledby="notices-title">
+              <div class="sidebar-heading"><span class="notice-mark" aria-hidden="true">i</span>
+                <h2 id="notices-title">Thông báo mới</h2>
+              </div>
+              <div id="news-notices">
+                <p class="news-result-summary">Đang tải thông báo…</p>
+              </div>
+            </section>
+            <section class="news-support">
+              <span class="support-eyebrow">ĐỒNG HÀNH CÙNG NGƯỜI BỆNH</span>
+              <h2>Chủ động đặt lịch,<br>an tâm thăm khám</h2>
+              <p>Đăng ký lịch khám để được bệnh viện liên hệ tư vấn và xác nhận.</p>
+              <button class="btn-hero-booking" type="button" data-open-booking>Đặt lịch khám <span
+                  aria-hidden="true">→</span></button>
+              <a class="support-phone" href="tel:02913678977">Hotline: <strong>0291 3 678 977</strong></a>
+            </section>
+            <a class="sidebar-guide" href="./quy-trinh.html"><span>Chuẩn bị trước khi đến khám<strong>Xem quy trình khám
+                  bệnh →</strong></span></a>
+          </aside>
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <a href="./index.html" class="footer-brand" aria-label="Bệnh viện Lao và Bệnh phổi Bạc Liêu">
+        <div class="footer-logo-circle">
+          <img src="./assets/images/logo.png" alt="" class="brand-logo" width="40" height="40">
+        </div>
+        <div class="footer-brand-text">
+          <strong class="footer-brand-title">BỆNH VIỆN LAO VÀ BỆNH PHỔI BẠC LIÊU</strong>
+          <span class="footer-brand-slogan">Vì lá phổi khỏe mạnh của cộng đồng</span>
+        </div>
+      </a>
+
+      <ul class="footer-nav-list">
+        <li><a href="./index.html">Trang chủ</a></li>
+        <li class="footer-nav-sep">|</li>
+        <li><a href="./index.html#gioi-thieu">Giới thiệu</a></li>
+        <li class="footer-nav-sep">|</li>
+        <li><a href="./dich-vu.html">Dịch vụ</a></li>
+        <li class="footer-nav-sep">|</li>
+        <li><a href="./tin-tuc.html">Tin tức</a></li>
+        <li class="footer-nav-sep">|</li>
+        <li><a href="./lien-he.html">Liên hệ</a></li>
+      </ul>
+
+      <div class="footer-tagline">
+        <em>Cùng nhau vì một cộng đồng hô hấp khỏe mạnh</em>
+      </div>
+    </div>
+  </footer>
+  <nav class="mobile-bottom-bar" aria-label="Thao tác nhanh trên điện thoại">
+    <a href="tel:02913678977" class="mobile-bar-btn btn-bar-hotline">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+        <path
+          d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+      <span>Gọi hotline</span>
+    </a>
+    <a href="https://maps.app.goo.gl/GyJshxH4hi9ogrvw8" target="_blank" rel="noopener noreferrer"
+      class="mobile-bar-btn btn-bar-route" title="Chỉ đường đến bệnh viện qua Google Maps">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+        <path
+          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+      </svg>
+      <span>Tìm đường</span>
+    </a>
+    <button type="button" class="mobile-bar-btn btn-bar-booking" data-open-booking>
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+        <path
+          d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+        <circle cx="9" cy="14" r="1.2" />
+        <circle cx="15" cy="14" r="1.2" />
+      </svg>
+      <span>Đặt lịch khám</span>
+    </button>
+  </nav>
+  <dialog class="booking-dialog" id="booking-dialog" aria-labelledby="dialog-title">
+    <div class="booking-modal-box">
+      <div class="dialog-header">
+        <h2 id="dialog-title">Đăng ký đặt lịch khám</h2>
+        <button class="dialog-close-btn" type="button" data-close-booking aria-label="Đóng">×</button>
+      </div>
+      <form class="modal-booking-form" id="booking-form" novalidate>
+        <p class="form-desc">Vui lòng điền thông tin để nhân viên bệnh viện liên hệ xác nhận lịch khám trong thời gian
+          sớm nhất.</p>
+        <div class="form-group">
+          <label for="fullName">Họ và tên <b class="req">*</b></label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Nhập họ và tên bệnh nhân">
+          <small class="field-error"></small>
+        </div>
+        <div class="form-group">
+          <label for="phone">Số điện thoại liên hệ <b class="req">*</b></label>
+          <input type="tel" id="phone" name="phone" required placeholder="Ví dụ: 0912 345 678"
+            pattern="^(0|\+84)[0-9 ]{8,12}$">
+          <small class="field-error"></small>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="appointmentDate">Ngày khám mong muốn <b class="req">*</b></label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+            <small class="field-error"></small>
+          </div>
+          <div class="form-group">
+            <label for="specialty">Chuyên khoa khám <span class="optional-label">(nếu biết)</span></label>
+            <select id="specialty" name="specialty">
+              <option value="">Chưa rõ chuyên khoa</option>
+              <option value="ho-hap">Khám Hô hấp</option>
+              <option value="lao">Khám Lao phổi</option>
+              <option value="phoi-man-tinh">Bệnh phổi mạn tính (Hen, COPD)</option>
+              <option value="tu-van-phong-benh">Tư vấn và phòng bệnh hô hấp</option>
+            </select>
+            <small class="field-error"></small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="symptoms">Mô tả triệu chứng <span class="optional-label">(Vui lòng mô tả vấn đề bạn gặp
+              phải)</span></label>
+          <textarea id="symptoms" name="symptoms" rows="3" maxlength="1500"
+            placeholder="Ví dụ: Ho/sốt dai dẳng 2–3 ngày..."></textarea>
+          <small class="field-error"></small>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="consent" name="consent" required checked>
+          <label for="consent">Tôi xác nhận đồng ý để bệnh viện liên hệ xác nhận lịch khám.</label>
+        </div>
+        <input class="hp-field" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" data-close-booking>Để sau</button>
+          <button type="submit" class="btn-submit-booking">Gửi thông tin đăng ký</button>
+        </div>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </dialog>
+  <dialog class="booking-dialog info-dialog" id="gia-dich-vu" aria-labelledby="prices-title">
+    <div class="booking-modal-box">
+      <div class="dialog-header">
+        <h2 id="prices-title">Tra cứu giá dịch vụ</h2><button class="dialog-close-btn" type="button" data-close-prices
+          aria-label="Đóng">×</button>
+      </div>
+      <p>Vui lòng liên hệ bệnh viện để được cung cấp bảng giá dịch vụ và tư vấn quyền lợi bảo hiểm y tế phù hợp với nhu
+        cầu khám.</p>
+      <a class="btn-hero-hotline" href="tel:02913678977">Gọi 0291 3 678 977</a>
+    </div>
+  </dialog>
+</body>
+
+</html>

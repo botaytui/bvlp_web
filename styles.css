@@ -1,0 +1,1675 @@
+html, body { overflow-x: hidden; max-width: 100%; }
+/* ==========================================================================
+   BỆNH VIỆN LAO VÀ BỆNH PHỐI BẠC LIÊU
+   Thiết kế giao diện chuẩn xác 100% theo mockup thiết kế
+   ========================================================================== */
+
+:root {
+  /* Bảng màu chuẩn từ mockup */
+  --primary-teal-dark: #075971;
+  /* Màu topbar, quy trình khám, footer */
+  --primary-teal: #00758a;
+  /* Màu thương hiệu, tagline, link active, icon */
+  --primary-text: #05495b;
+  /* Màu tiêu đề chính */
+  --primary-soft: #eaf7f8;
+  /* Nền dải thẻ tiện ích, thẻ liên hệ */
+  --primary-soft-border: #d8eff2;
+  /* Viền dải tiện ích */
+  --accent-orange: #ff5722;
+  /* Nút Đặt lịch khám nổi bật */
+  --accent-orange-hover: #e64a19;
+  /* Hover nút cam */
+  --text-dark: #1e293b;
+  /* Màu văn bản tối */
+  --text-muted: #55707d;
+  /* Màu văn bản phụ/chú thích */
+  --border-light: #e1edf0;
+  /* Viền thẻ trắng */
+  --white: #ffffff;
+  --container-max: 1140px;
+  --font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Reset & Cơ bản */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: #f7fafb;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+small,
+button,
+input,
+select,
+textarea {
+  font-size: 14px;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ==========================================================================
+   1. TOPBAR (Thanh tiện ích trên cùng)
+   ========================================================================== */
+.topbar {
+  background-color: var(--primary-teal-dark);
+  color: #e2f1f4;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+}
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-item,
+.topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #eaf6f8;
+}
+
+.topbar-phone strong {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.topbar-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.topbar-icon {
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.topbar-divider {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION - Premium Modern Medical Glass Design
+   ========================================================================== */
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 107, 135, 0.1);
+  box-shadow: 0 4px 20px -2px rgba(7, 71, 106, 0.07), 0 1px 3px rgba(0, 0, 0, 0.02);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 6px 24px -2px rgba(7, 71, 106, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-bottom-color: rgba(0, 107, 135, 0.15);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 16px;
+  transition: min-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-header.scrolled .header-inner {
+  min-height: 60px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.brand-link:hover {
+  opacity: 0.92;
+}
+
+.brand-logo-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 107, 135, 0.12);
+  padding: 2px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brand-link:hover .brand-logo-wrap {
+  transform: scale(1.05);
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-name {
+  color: #07476a;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  line-height: 1.25;
+}
+
+.brand-slogan {
+  color: #007a99;
+  font-size: 13.5px;
+  font-weight: 500;
+  margin-top: 2px;
+  line-height: 1.2;
+  letter-spacing: 0.15px;
+}
+
+/* Navigation */
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #2b4251;
+  padding: 8px 13px;
+  border-radius: 8px;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover {
+  color: #006b87;
+  background-color: rgba(0, 107, 135, 0.08);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: #005b7c;
+  background-color: rgba(0, 107, 135, 0.09);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  background: linear-gradient(90deg, #007a99, #00a896);
+  border-radius: 99px;
+  box-shadow: 0 1px 4px rgba(0, 122, 153, 0.35);
+}
+
+.nav-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #f0f7f9;
+  color: #07476a;
+  border: 1px solid rgba(0, 107, 135, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-search-btn:hover {
+  background-color: #e0f2f6;
+  color: #006b87;
+  border-color: rgba(0, 107, 135, 0.35);
+  transform: scale(1.08);
+  box-shadow: 0 3px 10px rgba(0, 107, 135, 0.15);
+}
+
+.btn-booking-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ff5e2b 0%, #ff420e 100%);
+  color: #ffffff;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(255, 78, 27, 0.32), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.1px;
+}
+
+.btn-booking-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-booking-header:hover {
+  background: linear-gradient(135deg, #ff6b3b 0%, #e83805 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 78, 27, 0.42);
+}
+
+.btn-booking-header:hover::before {
+  left: 100%;
+}
+
+.btn-booking-header:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 78, 27, 0.3);
+}
+
+.btn-booking-header svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-booking-header:hover svg {
+  transform: scale(1.1);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2.2px;
+  background-color: var(--primary-text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ==========================================================================
+   3. HERO BANNER
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background-color: #e5f5f7;
+  height: 250px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 250px;
+  min-height: 250px;
+  background-image: none;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.hero-text-wrap {
+  max-width: 530px;
+  padding: 28px 0;
+  z-index: 2;
+}
+
+.hero-title {
+  color: var(--primary-text);
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1.22;
+  margin-bottom: 3px;
+}
+
+.hero-line-desktop {
+  display: block;
+}
+
+.hero-line-mobile-1,
+.hero-line-mobile-2 {
+  display: none;
+}
+
+.hero-subtitle {
+  color: var(--primary-teal);
+  font-size: 19.5px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+  margin-bottom: 11px;
+}
+
+.hero-desc {
+  color: #43616d;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.btn-hero-booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--accent-orange);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.28);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-hero-booking:hover {
+  background-color: var(--accent-orange-hover);
+  transform: translateY(-1px);
+}
+
+.btn-hero-hotline {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--white);
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 1px solid #c2dbe0;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-hero-hotline:hover {
+  background-color: #f6fbfa;
+  border-color: var(--primary-teal);
+}
+
+.hero-carousel-dots {
+  display: none;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.hero-carousel-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #92cbd5;
+}
+
+.hero-carousel-dots .dot.active {
+  background-color: var(--primary-teal);
+  width: 7px;
+  height: 7px;
+}
+
+/* ==========================================================================
+   4. QUICK ACTION CARDS (5 Thẻ tiện ích nhanh)
+   ========================================================================== */
+.quick-actions-section {
+  padding: 14px 0 16px;
+  background-color: var(--white);
+}
+
+.quick-actions-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.quick-action-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-soft);
+  border: 1px solid var(--primary-soft-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  min-height: 70px;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-2px);
+  background-color: #e2f3f5;
+  box-shadow: 0 4px 12px rgba(7, 89, 113, 0.08);
+}
+
+.qa-icon-wrap {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+}
+
+.qa-icon-wrap img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.qa-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qa-title {
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.qa-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   5. CHUYÊN KHOA NỔI BẬT
+   ========================================================================== */
+.specialties-section {
+  padding: 8px 0 16px;
+  background-color: var(--white);
+}
+
+.section-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  color: var(--primary-text);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.link-view-all {
+  color: var(--primary-teal);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.link-view-all:hover {
+  color: var(--primary-text);
+  text-decoration: underline;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 11px;
+}
+
+.specialty-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 12px 14px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  min-height: 74px;
+}
+
+.specialty-card:hover {
+  transform: translateY(-2px);
+  border-color: #b5e1e7;
+  box-shadow: 0 4px 14px rgba(7, 89, 113, 0.08);
+}
+
+.spec-icon-wrap {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.spec-icon-wrap img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.spec-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spec-name {
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+.spec-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   6. QUY TRÌNH KHÁM ĐƠN GIẢN – THUẬN TIỆN (Dải màu xanh đậm)
+   ========================================================================== */
+.care-process-section {
+  background-color: var(--primary-teal-dark);
+  color: var(--white);
+  padding: 16px 0;
+}
+
+.process-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.process-title-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 175px;
+  flex-shrink: 0;
+}
+
+.process-heading {
+  color: var(--white);
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.process-subheading {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.process-steps-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 8px;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+}
+
+.step-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--primary-teal-dark);
+  font-size: 14.5px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-title {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.step-desc {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+.process-arrow {
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   7. TIN TỨC & THÔNG BÁO + THÔNG TIN LIÊN HỆ
+   ========================================================================== */
+.news-contact-section {
+  padding: 16px 0 20px;
+  background-color: var(--white);
+}
+
+.news-contact-container {
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Cột Tin tức */
+.news-cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.news-item-card {
+  display: flex;
+  gap: 9px;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 8px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  min-height: 94px;
+}
+
+.news-item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(7, 89, 113, 0.08);
+}
+
+.news-thumb-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.news-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.news-date {
+  color: #7e949e;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.news-item-title {
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.32;
+  margin-bottom: 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-item-title a:hover {
+  color: var(--primary-teal);
+}
+
+.news-item-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Cột Thông tin liên hệ */
+.contact-box-card {
+  background-color: var(--primary-soft);
+  border: 1px solid var(--primary-soft-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.contact-box-title {
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-box-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contact-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.contact-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #38515e;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.contact-meta-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contact-phone-link {
+  color: var(--primary-text);
+}
+
+.contact-phone-link strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-phone-link:hover {
+  color: var(--primary-teal);
+  text-decoration: underline;
+}
+
+.contact-map-preview {
+  position: relative;
+  width: 142px;
+  height: 96px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #cbe9ec;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(7, 89, 113, 0.08);
+}
+
+.contact-map-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.map-hospital-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.96);
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+  pointer-events: none;
+  border-left: 3px solid var(--accent-orange);
+}
+
+.map-hospital-badge span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-overlay-link {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background-color: rgba(7, 89, 113, 0.9);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.map-overlay-link:hover {
+  background-color: var(--accent-orange);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.site-footer {
+  background-color: var(--primary-teal-dark);
+  color: #d1e7eb;
+  padding: 14px 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.footer-logo-circle {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: none;
+  display: grid;
+  place-items: center;
+}
+
+.footer-logo-circle .brand-logo {
+  filter: brightness(0) invert(1);
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-title {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  line-height: 1.2;
+}
+
+.footer-brand-slogan {
+  color: #aed6dc;
+  font-size: 14px;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+.footer-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.footer-nav-list a {
+  color: #cde4e8;
+  font-size: 14px;
+}
+
+.footer-nav-list a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.footer-nav-sep {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+}
+
+.footer-tagline {
+  color: #b8dee3;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   9. MOBILE BOTTOM NAVIGATION (Thanh cố định điện thoại)
+   ========================================================================== */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 54px;
+  background-color: var(--primary-teal-dark);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-bar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  height: 100%;
+  flex: 1;
+}
+
+.btn-bar-hotline {
+  background-color: var(--primary-teal-dark);
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn-bar-route {
+  background-color: #086681;
+}
+
+.btn-bar-booking {
+  background-color: var(--accent-orange);
+  flex: 1.2;
+}
+
+.btn-bar-booking:active {
+  background-color: var(--accent-orange-hover);
+}
+
+/* ==========================================================================
+   10. MODAL / DIALOG ĐẶT LỊCH KHÁM
+   ========================================================================== */
+.booking-dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 480px;
+  width: calc(100% - 32px);
+  margin: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.booking-dialog::backdrop {
+  background-color: rgba(7, 59, 76, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.booking-modal-box {
+  padding: 24px;
+  background-color: var(--white);
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dialog-header h2 {
+  color: var(--primary-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dialog-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f0f6f7;
+  color: var(--primary-text);
+  font-size: 20px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.dialog-close-btn:hover {
+  background-color: #e0eff1;
+}
+
+.modal-booking-form .form-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.form-group .req {
+  color: var(--accent-orange);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #c8dce0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(0, 117, 138, 0.12);
+}
+
+.form-group textarea,
+.field textarea {
+  width: 100%;
+  min-height: 82px;
+  padding: 9px 10px;
+  border: 1px solid #c8dce0;
+  border-radius: 6px;
+  background-color: var(--white);
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group textarea:focus,
+.field textarea:focus {
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(0, 117, 138, 0.12);
+}
+
+.form-group.invalid input,
+.form-group.invalid select,
+.form-group.invalid textarea,
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border-color: #d32f2f;
+}
+
+.optional-label,
+.field>span small {
+  color: var(--text-muted);
+  font-size: max(14px, 0.9em);
+  font-weight: 400;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 12px 0 16px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.form-checkbox input {
+  margin-top: 2px;
+  accent-color: var(--primary-teal);
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancel {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background-color: #f1f6f7;
+}
+
+.btn-cancel:hover {
+  background-color: #e4edf0;
+}
+
+.btn-submit-booking {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--accent-orange);
+}
+
+.btn-submit-booking:hover {
+  background-color: var(--accent-orange-hover);
+}
+
+.field-error {
+  color: #d32f2f;
+  font-size: 14px;
+  min-height: 14px;
+}
+
+.form-status {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Tương thích máy tính bảng & di động)
+   ========================================================================== */
+
+/* Tablet & Màn hình nhỏ (dưới 1024px) */
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: 260px;
+    background-size: cover;
+  }
+
+  .news-contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box-card {
+    max-width: 480px;
+  }
+}
+
+/* Mobile View (dưới 768px) - Chuẩn xác theo khung iPhone của mockup */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 54px;
+    /* Chừa chỗ cho mobile bottom bar */
+  }
+
+  /* Ẩn topbar trên mobile */
+  .topbar {
+    display: none;
+  }
+
+  /* Header mobile */
+  .header-inner {
+    min-height: 56px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-slogan {
+    font-size: 14px;
+  }
+
+  .brand-logo-wrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .main-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px 20px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    border-top: 1px solid #ebf2f4;
+  }
+
+  .main-navigation.open {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f6f7;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-search-btn {
+    display: none;
+  }
+
+  .btn-booking-header {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    min-height: 250px;
+    background-image: url('./assets/images/hero-banner-v3.png');
+    background-position: 70% top;
+    background-size: cover;
+  }
+
+  .hero-container {
+    min-height: 250px;
+    background-image: none;
+  }
+
+  .hero-text-wrap {
+    max-width: 250px;
+    padding: 16px 0 20px;
+  }
+
+  .hero-title {
+    font-size: 14.5px;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  .hero-line-desktop {
+    display: none;
+  }
+
+  .hero-line-mobile-1,
+  .hero-line-mobile-2 {
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .hero-desc {
+    display: none;
+    /* Mockup mobile ẩn đoạn mô tả dài */
+  }
+
+  .btn-hero-booking {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+
+  .btn-hero-hotline {
+    display: none;
+    /* Mockup mobile chỉ giữ nút cam */
+  }
+
+  .hero-carousel-dots {
+    display: flex;
+  }
+
+  /* Quick Actions Mobile (Lưới 2x2 + 1 nút Tìm đường dài phía dưới) */
+  .quick-actions-section {
+    padding: 12px 0 10px;
+  }
+
+  .quick-actions-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .quick-action-card {
+    min-height: 72px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .qa-icon-wrap {
+    width: 32px;
+    height: 32px;
+  }
+
+  .qa-icon-wrap img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .qa-title {
+    font-size: 14px;
+  }
+
+  .qa-desc {
+    display: none;
+    /* Mockup mobile chỉ hiển thị title cho 4 nút */
+  }
+
+  .qa-card-route {
+    grid-column: 1 / -1;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .qa-card-route .qa-desc {
+    display: none;
+  }
+
+  /* Chuyên khoa nổi bật Mobile: Hiển thị 2 chuyên khoa đầu */
+  .specialties-section {
+    padding: 10px 0 16px;
+  }
+
+  .section-heading {
+    font-size: 14.5px;
+  }
+
+  .specialties-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .specialty-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 6px;
+    min-height: 80px;
+  }
+
+  .spec-icon-wrap {
+    width: 38px;
+    height: 38px;
+  }
+
+  .spec-icon-wrap img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .spec-name {
+    font-size: 14px;
+  }
+
+  .spec-desc {
+    display: none;
+    /* Mobile mockup chỉ hiện tên chuyên khoa */
+  }
+
+  .spec-card-extra {
+    display: none;
+    /* Chỉ hiện 2 thẻ Hô hấp & Lao phổi trên mobile mockup */
+  }
+
+  /* Ẩn Quy trình khám & Tin tức trên mobile theo đúng màn hình xem nhanh mockup */
+  .care-process-section,
+  .news-contact-section {
+    display: none;
+  }
+
+  /* Tin tức & Thông tin liên hệ Mobile */
+  .news-contact-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .news-column, .contact-column {
+    width: 100%;
+    min-width: 0;
+  }
+  .news-cards-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+  .news-item-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Quy trình khám mobile */
+  .care-process-section {
+    padding: 18px 0;
+  }
+  .process-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+  }
+  .process-title-box {
+    min-width: 0;
+    width: 100%;
+  }
+  .process-steps-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+  .process-step {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .process-arrow {
+    display: none;
+  }
+
+  /* Footer Mobile */
+  .site-footer {
+    padding: 16px 0 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-nav-list {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  /* Hiển thị Mobile Bottom Navigation */
+  .mobile-bottom-bar {
+    display: flex;
+  }
+}
+
+.hp-field {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
