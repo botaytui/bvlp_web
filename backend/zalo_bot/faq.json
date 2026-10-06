@@ -1,0 +1,717 @@
+[
+  {
+    "id": "BVPL-001",
+    "topic": "booking",
+    "question": "Đặt lịch khám như thế nào?",
+    "aliases": [
+      "đặt lịch",
+      "đăng ký khám",
+      "hẹn khám"
+    ],
+    "answer": "Anh/chị gửi yêu cầu qua biểu mẫu đặt lịch trên website bệnh viện. Điền thông tin chính xác và chờ bệnh viện xác nhận; gửi biểu mẫu chưa có nghĩa là đã được xác nhận lịch khám.",
+    "actions": [
+      {
+        "label": "Đặt lịch trên website",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-002",
+    "topic": "booking",
+    "question": "Tái khám cần chuẩn bị gì?",
+    "aliases": [
+      "tái khám"
+    ],
+    "answer": "Mang giấy hẹn và hồ sơ khám trước đó để nhân viên tiếp nhận đối chiếu. Nếu cần hỏi ngày tiếp nhận hoặc đổi lịch, gọi 0291 3 678 977.",
+    "actions": [
+      {
+        "label": "Xem hướng dẫn đặt lịch",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-003",
+    "topic": "booking",
+    "question": "Đổi lịch khám đã đăng ký?",
+    "aliases": [
+      "đổi lịch",
+      "dời lịch"
+    ],
+    "answer": "Anh/chị gọi 0291 3 678 977 để hỏi cách đổi yêu cầu đã gửi. Bot chưa cập nhật hoặc xác nhận thay đổi lịch khám.",
+    "actions": [
+      {
+        "label": "Trang đặt lịch",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-004",
+    "topic": "booking",
+    "question": "Hủy yêu cầu khám?",
+    "aliases": [
+      "hủy lịch",
+      "hủy hẹn"
+    ],
+    "answer": "Anh/chị liên hệ bệnh viện qua 0291 3 678 977 để thông báo yêu cầu hủy. Bot chưa thực hiện thao tác hủy lịch.",
+    "actions": [
+      {
+        "label": "Trang đặt lịch",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-005",
+    "topic": "booking",
+    "question": "Gửi biểu mẫu đã có lịch chưa?",
+    "aliases": [
+      "đã xác nhận lịch",
+      "đã gửi biểu mẫu",
+      "chờ xác nhận"
+    ],
+    "answer": "Gửi biểu mẫu là gửi yêu cầu hẹn. Anh/chị cần chờ bệnh viện xác nhận; nếu chưa được liên hệ, hãy hỏi bệnh viện về yêu cầu đã gửi.",
+    "actions": [
+      {
+        "label": "Trang đặt lịch",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-006",
+    "topic": "booking",
+    "question": "Có thể lấy số khám qua Bot không?",
+    "aliases": [
+      "lấy số",
+      "số thứ tự",
+      "đặt chỗ"
+    ],
+    "answer": "Bot chưa cấp số thứ tự tại quầy. Anh/chị có thể gửi yêu cầu hẹn trên website và hỏi quầy tiếp nhận về quy trình lấy số.",
+    "actions": [
+      {
+        "label": "Gửi yêu cầu hẹn",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-007",
+    "topic": "bhyt",
+    "question": "Khám BHYT cần giấy tờ gì?",
+    "aliases": [
+      "giấy tờ",
+      "mang gì",
+      "chuẩn bị gì",
+      "bhyt",
+      "bảo hiểm y tế"
+    ],
+    "answer": "Mang thông tin BHYT, giấy tờ xác minh nhân thân và giấy hẹn tái khám / giấy chuyển cơ sở khám chữa bệnh nếu có. Quầy tiếp nhận kiểm tra giấy tờ và quyền lợi theo trường hợp cụ thể; anh/chị xem thêm quy trình BHYT được bệnh viện công bố.",
+    "actions": [
+      {
+        "label": "Quy trình BHYT",
+        "url": "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-008",
+    "topic": "bhyt",
+    "question": "Khám trái tuyến được hưởng BHYT không?",
+    "aliases": [
+      "trái tuyến",
+      "khác nơi đăng ký"
+    ],
+    "answer": "Mức hưởng phụ thuộc hồ sơ và trường hợp khám cụ thể. Anh/chị gọi 0291 3 678 977 hoặc hỏi quầy tiếp nhận để kiểm tra trước khi khám; Bot chưa xác nhận mức thanh toán BHYT.",
+    "actions": [
+      {
+        "label": "Quy trình BHYT",
+        "url": "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-009",
+    "topic": "bhyt",
+    "question": "Giấy chuyển cơ sở khám chữa bệnh?",
+    "aliases": [
+      "chuyển tuyến",
+      "giấy chuyển",
+      "chuyển viện"
+    ],
+    "answer": "Nếu có giấy chuyển cơ sở khám chữa bệnh, mang theo để quầy tiếp nhận đối chiếu cùng thông tin BHYT và giấy tờ nhân thân. Trường hợp cần hoặc không cần giấy chuyển phải được nhân viên xác nhận.",
+    "actions": [
+      {
+        "label": "Quy trình BHYT",
+        "url": "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-010",
+    "topic": "bhyt",
+    "question": "BHYT thanh toán bao nhiêu phần trăm?",
+    "aliases": [
+      "mức hưởng",
+      "phần trăm",
+      "bhyt thanh toán"
+    ],
+    "answer": "Bot không suy đoán mức hưởng từ câu hỏi chung. Quầy tiếp nhận và bộ phận thu phí sẽ kiểm tra quyền lợi BHYT theo hồ sơ, dịch vụ và trường hợp cụ thể.",
+    "actions": [
+      {
+        "label": "Quy trình BHYT",
+        "url": "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-011",
+    "topic": "bhyt",
+    "question": "Quên thẻ BHYT phải làm sao?",
+    "aliases": [
+      "quên thẻ",
+      "mất thẻ",
+      "không mang thẻ"
+    ],
+    "answer": "Anh/chị gọi 0291 3 678 977 hoặc hỏi quầy tiếp nhận về cách xác minh BHYT và giấy tờ được chấp nhận trong trường hợp của mình.",
+    "actions": [
+      {
+        "label": "Quy trình BHYT",
+        "url": "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-012",
+    "topic": "bhyt",
+    "question": "Có dùng VNeID hoặc VssID khi khám không?",
+    "aliases": [
+      "vneid",
+      "vssid",
+      "thẻ điện tử"
+    ],
+    "answer": "Hãy hỏi quầy tiếp nhận về phương thức xác minh được áp dụng và chuẩn bị giấy tờ nhân thân. Bot chưa xác nhận khả năng sử dụng từng ứng dụng trong trường hợp cụ thể.",
+    "actions": [
+      {
+        "label": "Quy trình BHYT",
+        "url": "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/tin-tuc-benh-vien/184-quy-trinh-kham-ch-a-b-nh-3.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-013",
+    "topic": "contact",
+    "question": "Bệnh viện ở đâu?",
+    "aliases": [
+      "địa chỉ",
+      "ở đâu",
+      "đường đến"
+    ],
+    "answer": "Bệnh viện Lao và Bệnh phổi Bạc Liêu: Số 557, Quốc lộ 91B, khóm Vĩnh An, phường Vĩnh Trạch, tỉnh Cà Mau. Anh/chị có thể gọi bệnh viện để hỏi đường.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-014",
+    "topic": "contact",
+    "question": "Số điện thoại bệnh viện?",
+    "aliases": [
+      "điện thoại",
+      "hotline",
+      "gọi bệnh viện"
+    ],
+    "answer": "Điện thoại liên hệ bệnh viện: 0291 3 678 977.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-015",
+    "topic": "hours",
+    "question": "Giờ khám bệnh thế nào?",
+    "aliases": [
+      "giờ khám",
+      "giờ làm việc",
+      "mấy giờ",
+      "giờ mở cửa"
+    ],
+    "answer": "Vui lòng gọi 0291 3 678 977 để xác nhận giờ tiếp nhận của phòng khám hoặc dịch vụ anh/chị cần sử dụng. Bản thử chưa có lịch hoạt động đã được cập nhật và duyệt.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-016",
+    "topic": "hours",
+    "question": "Cuối tuần có khám không?",
+    "aliases": [
+      "cuối tuần",
+      "thứ bảy",
+      "thứ 7",
+      "chủ nhật"
+    ],
+    "answer": "Anh/chị gọi 0291 3 678 977 để xác nhận phòng khám và dịch vụ có tiếp nhận vào ngày dự định đến. Bot không tự xác nhận lịch cuối tuần.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-017",
+    "topic": "hours",
+    "question": "Ngày lễ có tiếp nhận không?",
+    "aliases": [
+      "ngày lễ",
+      "ngày tết",
+      "lễ tết"
+    ],
+    "answer": "Anh/chị gọi 0291 3 678 977 để xác nhận lịch tiếp nhận trong dịp lễ/Tết. Nếu cần cấp cứu, liên hệ 115 hoặc cơ sở cấp cứu gần nhất, không chờ chat.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-018",
+    "topic": "contact",
+    "question": "Website chính thức là gì?",
+    "aliases": [
+      "website",
+      "trang web"
+    ],
+    "answer": "Website bệnh viện: https://bvlbpbl.vn/.",
+    "actions": [
+      {
+        "label": "Mở website",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-019",
+    "topic": "contact",
+    "question": "Nhắn OA chính thức ở đâu?",
+    "aliases": [
+      "oa chính thức",
+      "zalo bệnh viện",
+      "nhắn oa"
+    ],
+    "answer": "Anh/chị nhắn OA Bệnh viện Lao và Bệnh phổi Bạc Liêu tại liên kết bên dưới. Đây là hướng dẫn liên hệ; chưa xác nhận nhân viên đã đọc tin nhắn.",
+    "actions": [
+      {
+        "label": "Nhắn OA",
+        "url": "https://zalo.me/bvlaophoibaclieu"
+      }
+    ],
+    "sources": [
+      "https://zalo.me/bvlaophoibaclieu"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-020",
+    "topic": "feedback",
+    "question": "Góp ý về dịch vụ?",
+    "aliases": [
+      "góp ý",
+      "phản ánh",
+      "khiếu nại"
+    ],
+    "answer": "Anh/chị gửi góp ý tới OA bệnh viện hoặc gọi 0291 3 678 977. Nêu vấn đề, thời điểm và bộ phận liên quan; tránh gửi thông tin riêng tư của người bệnh khác. Bot chưa tạo phiếu hoặc xác nhận đã tiếp nhận phản ánh.",
+    "actions": [
+      {
+        "label": "Liên hệ OA",
+        "url": "https://zalo.me/bvlaophoibaclieu"
+      }
+    ],
+    "sources": [
+      "https://zalo.me/bvlaophoibaclieu"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-021",
+    "topic": "pricing",
+    "question": "Xem bảng giá dịch vụ?",
+    "aliases": [
+      "danh mục dịch vụ",
+      "tra dịch vụ"
+    ],
+    "answer": "Anh/chị xem danh mục và bảng giá công bố trên website bệnh viện. Có thể hỏi Bot tên hoặc mã dịch vụ; chi phí thực tế và quyền lợi BHYT cần được bộ phận thu phí xác nhận.",
+    "actions": [
+      {
+        "label": "Xem bảng giá",
+        "url": "https://bvlbpbl.vn/index.php/gia-dich-vu/danh-muc-dich-vu-ky-thuat.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/gia-dich-vu/danh-muc-dich-vu-ky-thuat.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-022",
+    "topic": "pricing",
+    "question": "Giá tham khảo có phải tổng tiền khám?",
+    "aliases": [
+      "tổng tiền khám",
+      "tổng chi phí"
+    ],
+    "answer": "Đơn giá từng dịch vụ không phải tổng tiền của lần khám. Chi phí phụ thuộc chỉ định và trường hợp BHYT; hãy hỏi bộ phận thu phí trước khi sử dụng dịch vụ.",
+    "actions": [
+      {
+        "label": "Bảng giá công bố",
+        "url": "https://bvlbpbl.vn/index.php/gia-dich-vu/danh-muc-dich-vu-ky-thuat.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/gia-dich-vu/danh-muc-dich-vu-ky-thuat.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-023",
+    "topic": "pricing",
+    "question": "Không thấy dịch vụ cần tra?",
+    "aliases": [
+      "không thấy dịch vụ",
+      "không tìm thấy dịch vụ"
+    ],
+    "answer": "Anh/chị nhập tên hoặc mã dịch vụ cụ thể hơn, xem danh mục công bố hoặc gọi 0291 3 678 977 để được hướng dẫn. Bot không tự tạo tên kỹ thuật hoặc đơn giá.",
+    "actions": [
+      {
+        "label": "Xem danh mục",
+        "url": "https://bvlbpbl.vn/index.php/gia-dich-vu/danh-muc-dich-vu-ky-thuat.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/gia-dich-vu/danh-muc-dich-vu-ky-thuat.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-024",
+    "topic": "clinical",
+    "question": "Nhận kết quả xét nghiệm cá nhân?",
+    "aliases": [
+      "nhận kết quả",
+      "lấy kết quả",
+      "kết quả xét nghiệm"
+    ],
+    "answer": "Liên hệ nơi khám hoặc gọi 0291 3 678 977 để hỏi cách nhận kết quả và xác minh thông tin. Bot chưa truy xuất kết quả hay hồ sơ người bệnh.",
+    "actions": [
+      {
+        "label": "Liên hệ OA",
+        "url": "https://zalo.me/bvlaophoibaclieu"
+      }
+    ],
+    "sources": [
+      "https://zalo.me/bvlaophoibaclieu"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-025",
+    "topic": "clinical",
+    "question": "Hỏi về đơn thuốc?",
+    "aliases": [
+      "đơn thuốc",
+      "đổi liều",
+      "ngừng thuốc"
+    ],
+    "answer": "Anh/chị liên hệ bác sĩ hoặc nơi khám để được hướng dẫn về đơn thuốc. Không tự đổi liều hay ngừng thuốc theo câu trả lời tự động.",
+    "actions": [
+      {
+        "label": "Liên hệ bệnh viện",
+        "url": "https://zalo.me/bvlaophoibaclieu"
+      }
+    ],
+    "sources": [
+      "https://zalo.me/bvlaophoibaclieu"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-026",
+    "topic": "privacy",
+    "question": "Có nên gửi ảnh CCCD hoặc BHYT?",
+    "aliases": [
+      "ảnh cccd",
+      "ảnh thẻ",
+      "gửi cccd",
+      "gửi hồ sơ"
+    ],
+    "answer": "Không gửi ảnh CCCD, thẻ BHYT hoặc hồ sơ bệnh án trong câu hỏi hướng dẫn chung. Khi bệnh viện cần xác minh, nhân viên sẽ hướng dẫn kênh và thông tin phù hợp.",
+    "actions": [
+      {
+        "label": "Liên hệ OA",
+        "url": "https://zalo.me/bvlaophoibaclieu"
+      }
+    ],
+    "sources": [
+      "https://zalo.me/bvlaophoibaclieu"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-027",
+    "topic": "privacy",
+    "question": "Bot lưu thông tin gì?",
+    "aliases": [
+      "lưu thông tin",
+      "dữ liệu cá nhân",
+      "quyền riêng tư"
+    ],
+    "answer": "Bản thử giữ chủ đề hội thoại trong bộ nhớ tối đa 15 phút, không lưu nguyên văn câu hỏi. Khi kết nối Zalo, hàng đợi giữ địa chỉ trả lời và nội dung hướng dẫn, xóa ngay sau lần gửi và tự dọn mục hết hạn 24 giờ khi dịch vụ chạy; mã sự kiện được băm để chống trả lời trùng. Chưa liên kết tài khoản Bot với hồ sơ bệnh viện.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-028",
+    "topic": "about",
+    "question": "Bot giúp được việc gì?",
+    "aliases": [
+      "giúp được gì",
+      "chức năng",
+      "làm được gì"
+    ],
+    "answer": "Bản thử hướng dẫn đặt lịch, giấy tờ BHYT, thông tin liên hệ và tra bảng giá. Bot trả lời từ FAQ theo quy tắc tìm kiếm; chưa dùng mô hình AI sinh nội dung.",
+    "actions": [
+      {
+        "label": "Website bệnh viện",
+        "url": "https://bvlbpbl.vn/"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-029",
+    "topic": "about",
+    "question": "Mini App đã mở công khai chưa?",
+    "aliases": [
+      "mini app",
+      "miniapp"
+    ],
+    "answer": "Mini App bệnh viện hiện đang trong giai đoạn Testing, chưa có bản được duyệt phát hành theo lần kiểm tra 05/10/2026. Bản Bot thử dùng liên kết website để đặt lịch và xem giá.",
+    "actions": [
+      {
+        "label": "Đặt lịch trên website",
+        "url": "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+      }
+    ],
+    "sources": [
+      "https://bvlbpbl.vn/index.php/dat-lich-kham-benh.html"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  },
+  {
+    "id": "BVPL-030",
+    "topic": "clinical",
+    "question": "Tôi muốn hỏi về triệu chứng hô hấp?",
+    "aliases": [
+      "triệu chứng",
+      "ho nhiều",
+      "khó thở"
+    ],
+    "answer": "Anh/chị liên hệ nơi khám hoặc gọi 0291 3 678 977 để được nhân viên hướng dẫn và bác sĩ đánh giá. Bot hướng dẫn thủ tục chưa chẩn đoán bệnh. Nếu cần cấp cứu, liên hệ 115 hoặc cơ sở cấp cứu gần nhất.",
+    "actions": [
+      {
+        "label": "Liên hệ bệnh viện",
+        "url": "https://zalo.me/bvlaophoibaclieu"
+      }
+    ],
+    "sources": [
+      "https://zalo.me/bvlaophoibaclieu"
+    ],
+    "derived_from": "zalo/deployment/production-flows.json",
+    "review_status": "draft_pilot",
+    "approved_by": null,
+    "updated_at": "2026-10-05"
+  }
+]

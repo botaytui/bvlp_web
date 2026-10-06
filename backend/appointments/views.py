@@ -127,6 +127,10 @@ def create_appointment(request):
             "message": "Lịch đăng ký này đã được tiếp nhận.",
         })
 
+    source = str(payload.get("source", "website")).strip()[:30] or "website"
+    if source not in ["website", "zalo_miniapp", "zalo_oa"]:
+        source = "website"
+
     try:
         with transaction.atomic():
             appointment = AppointmentRequest.objects.create(
@@ -139,11 +143,17 @@ def create_appointment(request):
                 consent_at=timezone.now(),
                 consent_version="booking-v1",
                 idempotency_key=idempotency_key,
+                source=source,
             )
+            source_labels = {
+                "website": "Tiếp nhận từ website",
+                "zalo_miniapp": "Tiếp nhận từ Zalo Mini App",
+                "zalo_oa": "Tiếp nhận từ Zalo OA",
+            }
             AppointmentStatusHistory.objects.create(
                 appointment=appointment,
                 to_status=AppointmentRequest.Status.NEW,
-                note="Tiếp nhận từ website",
+                note=source_labels.get(source, "Tiếp nhận trực tuyến"),
             )
     except IntegrityError:
         existing = AppointmentRequest.objects.filter(**duplicate_filter).first()

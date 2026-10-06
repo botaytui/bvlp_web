@@ -11,7 +11,16 @@ class CorsMiddleware:
 
     def __call__(self, request):
         origin = request.headers.get("Origin")
-        allowed = origin in settings.CORS_ALLOWED_ORIGINS
+        allowed = (
+            origin in settings.CORS_ALLOWED_ORIGINS
+            or (origin and (
+                origin.startswith("http://localhost:")
+                or origin.startswith("http://127.0.0.1:")
+                or "zdn.vn" in origin
+                or "zalo.me" in origin
+                or "zaloplatforms.com" in origin
+            ))
+        )
         if request.method == "OPTIONS" and allowed:
             response = HttpResponse(status=204)
         else:
@@ -20,7 +29,7 @@ class CorsMiddleware:
         if allowed:
             response["Access-Control-Allow-Origin"] = origin
             response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-            response["Access-Control-Allow-Headers"] = "Content-Type"
+            response["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Requested-With"
             response["Access-Control-Max-Age"] = "86400"
             patch_vary_headers(response, ("Origin",))
         return response

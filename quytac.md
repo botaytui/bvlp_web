@@ -90,17 +90,29 @@ Luôn sao lưu hai file trước khi ghi đè.
 
 ## 6. Khởi động dịch vụ
 
-Chạy:
+Mở ConEmu tại thư mục dự án và chạy:
 
 ```text
-<PROJECT_DIR>\run_web4173.bat
+run_web4173.bat start
 ```
 
 File này khởi động:
 
-- frontend ở `127.0.0.1:4173`;
-- backend ở `127.0.0.1:8002`;
+- frontend chạy nền ở `127.0.0.1:4173`;
+- backend chạy nền ở `127.0.0.1:8002`;
 - migrate database và collect static trước khi chạy backend.
+- không mở thêm cửa sổ CMD; log và PID được lưu tại `%TEMP%\bvlp_web4173`.
+
+Các lệnh quản lý trong ConEmu:
+
+```text
+run_web4173.bat start
+run_web4173.bat stop
+run_web4173.bat restart
+run_web4173.bat status
+run_web4173.bat logs
+run_web4173.bat open
+```
 
 Sau đó khởi động lại Cloudflare Tunnel để nạp ingress mới:
 
@@ -108,7 +120,7 @@ Sau đó khởi động lại Cloudflare Tunnel để nạp ingress mới:
 C:\cloudflared\cloudflared.exe tunnel --config C:\cloudflared\config.yml run <TUNNEL_NAME>
 ```
 
-Chỉ nên có một backend giữ cổng `8002` và một frontend giữ cổng `4173`. Tránh nhấp đúp launcher nhiều lần.
+Launcher kiểm tra cổng trước khi chạy để tránh tạo trùng tiến trình. Dùng lệnh `restart` thay vì nhấp đúp launcher nhiều lần.
 
 ## 7. Kiểm tra sau khi triển khai
 

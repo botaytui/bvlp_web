@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-only-change-before-production")
 if not DEBUG and SECRET_KEY == "dev-only-change-before-production":
     raise RuntimeError("DJANGO_SECRET_KEY must be set when DJANGO_DEBUG=false")
 
-ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost")
+ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,testserver")
 CORS_ALLOWED_ORIGINS = set(
     env_list("CORS_ALLOWED_ORIGINS", "http://127.0.0.1:4173,http://localhost:4173")
 )
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "appointments",
     "news",
     "dvkt",
+    "chatbot",
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+ZALO_MINIAPP_ID = os.getenv("ZALO_MINIAPP_ID", "2927834622142925514")
+ZALO_MINIAPP_API_KEY = os.getenv("ZALO_MINIAPP_API_KEY", "")
+ZALO_MINIAPP_EVENT_DIR = BASE_DIR / "data" / "zalo-miniapp-events"
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"

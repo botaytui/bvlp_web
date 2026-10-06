@@ -1265,6 +1265,30 @@
   .home-page .form-row-2 { grid-template-columns: 1fr; gap: 0; }
   .home-page .info-dialog .btn-hero-hotline { display: inline-flex; }
 }
+
+/* Điện thoại quay ngang: banner phải phủ hết chiều ngang và giữ giao diện mobile. */
+@media (orientation: landscape) and (max-width: 1024px) and (max-height: 500px) {
+  .home-page .hero-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .home-page .hero-art {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  .home-page .hero-text-wrap > .hero-title,
+  .home-page .hero-text-wrap > .hero-subtitle,
+  .home-page .hero-text-wrap .btn-hero-booking,
+  .home-page .hero-desc,
+  .home-page .btn-hero-hotline {
+    display: none;
+  }
+}
+
 @media (min-width: 769px) { .home-page .qa-mobile-icon { display: none; } }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

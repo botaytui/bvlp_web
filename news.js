@@ -1,6 +1,6 @@
 const configuredApiBase = document.querySelector('meta[name=news-api-base-url]')?.content?.trim();
 const isLocalWebsite = ['127.0.0.1', 'localhost'].includes(window.location.hostname);
-const newsApiBase = configuredApiBase || (isLocalWebsite ? 'http://127.0.0.1:8002' : '');
+const newsApiBase = configuredApiBase || (isLocalWebsite ? 'http://127.0.0.1:8002' : window.location.origin);
 const view = document.body.dataset.newsView;
 
 function element(tag, className, text) {
@@ -36,7 +36,7 @@ function postTime(post, prefix = '') {
 function resolveMediaUrl(url) {
   if (!url) return '';
   if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:') || url.startsWith('./')) return url;
-  const base = newsApiBase || 'http://127.0.0.1:8002';
+  const base = newsApiBase || window.location.origin;
   return `${base}${url.startsWith('/') ? '' : '/'}${url}`;
 }
 
