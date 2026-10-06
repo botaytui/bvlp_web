@@ -352,7 +352,7 @@ class Command(BaseCommand):
             id=1,
             defaults={
                 "is_enabled": True,
-                "bot_name": "Trợ lý Y tế BV Lao & Bệnh Phổi Bạc Liêu",
+                "bot_name": "Trợ lý Y tế\nBệnh viện Lao và Bệnh phổi Bạc Liêu",
                 "welcome_message": (
                     "Xin chào! Tôi là **Trợ lý AI Bệnh viện Lao và Bệnh phổi Bạc Liêu** ✨.\n\n"
                     "Tôi có thể hỗ trợ bạn:\n"

@@ -26,7 +26,7 @@
 
   let chatbotConfig = {
     is_enabled: false,
-    bot_name: 'Trợ lý Y tế BV Lao & Bệnh Phổi Bạc Liêu',
+    bot_name: 'Trợ lý Y tế<br>Bệnh viện Lao và Bệnh phổi Bạc Liêu',
     welcome_message: 'Xin chào! Tôi có thể hỗ trợ bạn tìm hiểu thông tin khám chữa bệnh.',
     emergency_hotline: '0291 3 678 977',
     disclaimer_text: 'Thông tin mang tính tham khảo y tế, không thay thế chẩn đoán trực tiếp của Bác sĩ.',
@@ -126,7 +126,7 @@
               <div class="cb-status-dot"></div>
             </div>
             <div class="cb-header-info">
-              <h4 id="cb-bot-title">${chatbotConfig.bot_name}</h4>
+              <h4 id="cb-bot-title">${(chatbotConfig.bot_name || '').replace(/\n/g, '<br>').replace(/Trợ lý Y tế BV Lao & Bệnh Phổi Bạc Liêu/g, 'Trợ lý Y tế<br>Bệnh viện Lao và Bệnh phổi Bạc Liêu')}</h4>
               <p>
                 <span style="display:inline-block; width:6px; height:6px; background:#4ade80; border-radius:50%;"></span>
                 Trực tuyến · Sẵn sàng giải đáp

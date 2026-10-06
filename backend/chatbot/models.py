@@ -11,7 +11,7 @@ class ChatbotConfig(models.Model):
     bot_name = models.CharField(
         "Tên Trợ lý ảo",
         max_length=150,
-        default="Trợ lý Y tế BV Lao & Bệnh Phổi Bạc Liêu",
+        default="Trợ lý Y tế\nBệnh viện Lao và Bệnh phổi Bạc Liêu",
     )
     welcome_message = models.TextField(
         "Lời chào mở đầu",
